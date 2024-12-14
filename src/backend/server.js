@@ -9,7 +9,7 @@ const path = require('path');
 
 const { setupLogging } = require('./utils/logger');
 const { connectDB } = require('./config/database');
-const errorHandler = require('./middleware/errorHandler');
+const { errorHandler } = require('./middleware/errorHandler');
 
 // Import routes
 const authRoutes = require('./routes/auth.routes');
