@@ -27,7 +27,7 @@ Before you begin, make sure you have the following installed on your machine:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/startup-boilerplate.git your-project-name
+   git clone https://github.com/denisjacquemin/startup-boilerplate.git your-project-name
    cd your-project-name
    ```
 
@@ -53,7 +53,7 @@ Before you begin, make sure you have the following installed on your machine:
 
 1. **Clone and Rename the Project**
    ```bash
-   git clone https://github.com/your-username/startup-boilerplate.git your-project-name
+   git clone https://github.com/denisjacquemin/startup-boilerplate.git your-project-name
    cd your-project-name
    rm -rf .git
    git init

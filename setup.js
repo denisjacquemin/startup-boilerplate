@@ -51,7 +51,7 @@ async function setup() {
 
 ${projectDescription}
 
-This project was bootstrapped with [Startup Boilerplate](https://github.com/your-username/startup-boilerplate).
+This project was bootstrapped with [Startup Boilerplate](https://github.com/denisjacquemin/startup-boilerplate).
 
 ## Getting Started
 
