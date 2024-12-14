@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Full-Stack App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="material-icons">rocket_launch</span>
+                <h1>Modern App</h1>
+            </div>
+            <div class="navbar-menu">
+                <button id="themeToggle" class="btn-icon">
+                    <span class="material-icons">dark_mode</span>
+                </button>
+                <div id="userMenu" class="user-menu hidden">
+                    <button class="btn-text">Profile</button>
+                    <button class="btn-text">Settings</button>
+                    <button class="btn-text" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Auth Forms -->
+            <div id="authForms" class="auth-container">
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form">
+                    <h2>Welcome Back</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required class="input">
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <p class="text-center">
+                        Don't have an account? 
+                        <a href="#" id="showRegister">Register</a>
+                    </p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form hidden">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <label for="registerUsername">Username</label>
+                        <input type="text" id="registerUsername" required class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required class="input">
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                    <p class="text-center">
+                        Already have an account? 
+                        <a href="#" id="showLogin">Login</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Dashboard (hidden by default) -->
+            <div id="dashboard" class="dashboard hidden">
+                <div class="dashboard-header">
+                    <h2>Dashboard</h2>
+                    <p>Welcome back, <span id="userNameDisplay"></span>!</p>
+                </div>
+                <div class="dashboard-content">
+                    <!-- Dashboard content will be dynamically loaded -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Toast Notifications -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
