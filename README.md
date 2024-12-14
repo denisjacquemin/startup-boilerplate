@@ -365,7 +365,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [MongoDB](https://www.mongodb.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [JWT](https://jwt.io/)
-
-## 📧 Support
-
-For support, email your-email@example.com or create an issue in the repository. 
