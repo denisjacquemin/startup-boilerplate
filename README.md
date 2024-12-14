@@ -21,37 +21,82 @@ Before you begin, make sure you have the following installed on your machine:
    - Download from [Git official website](https://git-scm.com/downloads)
    - Verify installation: `git --version`
 
-### Step-by-Step Installation
+### Installation Options
+
+#### Option 1: Automated Setup (Recommended)
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/startup-boilerplate.git
-   cd startup-boilerplate
+   git clone https://github.com/your-username/startup-boilerplate.git your-project-name
+   cd your-project-name
    ```
 
-2. **Install Dependencies**
+2. **Run the Setup Script**
    ```bash
-   # Using npm
+   npm run setup
+   ```
+   The setup script will:
+   - Ask for your project details (name, description, author)
+   - Update all necessary files automatically
+   - Initialize a fresh Git repository
+   - Generate secure JWT secrets
+   - Create a customized README
+   - Set up the database configuration
+
+3. **Install Dependencies and Start**
+   ```bash
    npm install
-
-   # OR using Yarn
-   yarn install
+   npm run dev
    ```
 
-3. **Set Up Environment Variables**
+#### Option 2: Manual Setup
+
+1. **Clone and Rename the Project**
    ```bash
-   # Copy the example environment file
+   git clone https://github.com/your-username/startup-boilerplate.git your-project-name
+   cd your-project-name
+   rm -rf .git
+   git init
+   ```
+
+2. **Update Project Information**
+   - Edit `package.json`:
+     ```json
+     {
+       "name": "your-project-name",
+       "version": "1.0.0",
+       "description": "Your project description"
+     }
+     ```
+   - Update the MongoDB URI in `.env`:
+     ```env
+     MONGODB_URI=mongodb://localhost:27017/your-project-name
+     ```
+   - Update the title in `src/frontend/index.html`
+   - Modify this README.md to reflect your project
+
+3. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Set Up Environment Variables**
+   ```bash
    cp .env.example .env
-
-   # Open .env in your text editor and update the values:
-   # - Generate strong secrets for JWT_SECRET and JWT_REFRESH_SECRET
-   # - Update MONGODB_URI if using a different database name
-   # - Customize theme settings if desired
+   ```
+   Then edit `.env` with your values:
+   ```env
+   PORT=3000
+   NODE_ENV=development
+   MONGODB_URI=mongodb://localhost:27017/your-project-name
+   JWT_SECRET=your_generated_secret
+   JWT_REFRESH_SECRET=your_generated_refresh_secret
    ```
 
-4. **Start MongoDB**
+### Starting the Application
+
+1. **Start MongoDB**
    ```bash
-   # Start MongoDB service
    # On macOS/Linux:
    mongod
 
@@ -59,16 +104,12 @@ Before you begin, make sure you have the following installed on your machine:
    net start MongoDB
    ```
 
-5. **Start the Development Server**
+2. **Start the Development Server**
    ```bash
-   # Using npm
    npm run dev
-
-   # OR using Yarn
-   yarn dev
    ```
 
-6. **Access the Application**
+3. **Access the Application**
    - Open your browser and navigate to: `http://localhost:3000`
    - Default admin credentials (create these on first run):
      - Email: admin@example.com
