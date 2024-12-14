@@ -1,0 +1,76 @@
+# .cursorrules
+
+# General coding style
+use_spaces_for_indentation
+indent_size 2
+max_line_length 100
+use_semicolons
+
+# JavaScript specific rules
+use_const_for_variables_not_reassigned
+use_let_for_variables_reassigned
+use_arrow_functions_where_appropriate
+use_template_literals_for_string_interpolation
+
+# Express.js backend rules
+use_async_await_for_asynchronous_operations
+use_try_catch_for_error_handling
+use_middleware_for_common_operations
+organize_routes_by_resource
+
+# MongoDB and Mongoose rules
+use_mongoose_schemas_for_data_modeling
+use_indexes_for_frequently_queried_fields
+use_lean_queries_for_read_operations
+
+# Security rules
+sanitize_user_inputs
+use_helmet_for_security_headers
+implement_rate_limiting_on_sensitive_routes
+use_bcrypt_for_password_hashing
+use_jwt_for_authentication
+
+# Frontend rules
+use_semantic_html
+implement_responsive_design
+follow_shadcn_ui_conventions
+implement_accessibility_features
+use_css_variables_for_theming
+
+# Performance rules
+minify_and_bundle_assets_for_production
+implement_lazy_loading_for_images_and_components
+use_caching_strategies_where_appropriate
+
+# Testing rules
+write_unit_tests_for_all_functions
+implement_integration_tests_for_api_endpoints
+use_jest_for_testing_framework
+
+# Documentation rules
+use_jsdoc_for_function_documentation
+maintain_up_to_date_readme
+document_all_environment_variables
+
+# Version control rules
+use_meaningful_commit_messages
+create_feature_branches_for_new_work
+
+# Environment and configuration
+use_dotenv_for_environment_variables
+separate_development_and_production_configs
+
+# Error handling
+implement_global_error_handler
+log_errors_with_appropriate_level_of_detail
+
+# API design
+follow_restful_conventions
+use_plural_nouns_for_resource_endpoints
+version_api_endpoints
+
+# Accessibility
+ensure_proper_color_contrast
+use_aria_attributes_where_necessary
+ensure_keyboard_navigation_support
+
