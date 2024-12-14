@@ -280,3 +280,41 @@ class App {
 // Create and export App instance
 const app = new App();
 window.app = app; // Make it accessible globally 
+
+// Theme management examples
+console.log('Available themes:', window.theme.getAvailableThemes());
+console.log('Current theme:', window.theme.getCurrentTheme());
+
+// You can change themes using:
+window.theme.setTheme('red');     // For red theme
+// window.theme.setTheme('slate');   // For slate theme
+// window.theme.setTheme('zinc');    // For zinc theme
+// window.theme.setTheme('neutral'); // For neutral theme
+// window.theme.setTheme('stone');   // For stone theme
+// window.theme.setTheme('gray');    // For gray theme
+// window.theme.setTheme('rose');    // For rose theme
+// window.theme.setTheme('orange');  // For orange theme
+// window.theme.setTheme('green');   // For green theme
+// window.theme.setTheme('blue');    // For blue theme
+// window.theme.setTheme('yellow');  // For yellow theme
+// window.theme.setTheme('violet');  // For violet theme
+
+// Toggle between light/dark mode:
+// window.theme.toggleTheme();
+
+// Example: Set up keyboard shortcuts for theme switching
+document.addEventListener('keydown', (e) => {
+    // Ctrl/Cmd + Shift + T to cycle through themes
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'T') {
+        const themes = window.theme.getAvailableThemes();
+        const currentTheme = window.theme.getCurrentTheme().name;
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextIndex = (currentIndex + 1) % themes.length;
+        window.theme.setTheme(themes[nextIndex]);
+    }
+    
+    // Ctrl/Cmd + Shift + D to toggle dark mode
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+        window.theme.toggleTheme();
+    }
+});
